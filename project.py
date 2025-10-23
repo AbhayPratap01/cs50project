@@ -26,7 +26,6 @@ def move_file(src, dest_dir):
     filename = os.path.basename(src)
     target = os.path.join(dest_dir, filename)
     i = 1
-    # Avoid overwrite
     while os.path.exists(target):
         name, ext = os.path.splitext(filename)
         target = os.path.join(dest_dir, f"{name}_{i}{ext}")
